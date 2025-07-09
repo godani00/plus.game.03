@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #333;
+    font-size: 20px; /* 기본 폰트 크기 증가 */
 }
 
 .scene {
@@ -36,14 +37,14 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 20px 40px; /* 버튼 크기 증가 */
+    font-size: 1.8rem; /* 버튼 텍스트 크기 증가 */
     border: none;
     border-radius: 50px;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
-    margin: 10px;
+    margin: 15px;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
@@ -54,13 +55,14 @@ body {
 
 /* Start Scene */
 #startScene h1 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 3rem; /* 제목 크기 증가 */
+    margin-bottom: 40px;
+    line-height: 1.3;
 }
 
 .instructions p {
-    font-size: 1.1rem;
-    margin: 10px 0;
+    font-size: 1.5rem; /* 설명 텍스트 크기 증가 */
+    margin: 15px 0;
     line-height: 1.5;
 }
 
@@ -69,7 +71,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 1.2rem;
+    font-size: 1.8rem; /* 점수 표시 크기 증가 */
     font-weight: bold;
 }
 
@@ -90,9 +92,9 @@ body {
 }
 
 .problem {
-    font-size: 2.5rem;
+    font-size: 4rem; /* 문제 텍스트 크기 크게 증가 */
     font-weight: bold;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .answer-input {
@@ -103,26 +105,26 @@ body {
 }
 
 #answerInput {
-    width: 200px;
-    height: 60px;
-    font-size: 2rem;
+    width: 250px; /* 입력창 너비 증가 */
+    height: 80px; /* 입력창 높이 증가 */
+    font-size: 3rem; /* 입력창 텍스트 크기 증가 */
     text-align: center;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    border: 3px solid #ddd;
+    border-radius: 15px;
 }
 
 /* Success Scene */
 #successScene h2 {
-    font-size: 2rem;
+    font-size: 3rem; /* 성공 메시지 크기 증가 */
     color: #4CAF50;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* Fail Scene */
 #failScene h2 {
-    font-size: 2rem;
+    font-size: 3rem; /* 실패 메시지 크기 증가 */
     color: #f44336;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .fail-animation {
@@ -133,7 +135,7 @@ body {
 }
 
 .flying-emoji {
-    font-size: 50px;
+    font-size: 80px; /* 이모지 크기 증가 */
     position: absolute;
     animation: flyAcross 4s linear;
 }
@@ -148,22 +150,28 @@ body {
 }
 
 /* Coupon Scene */
+#couponScene h2 {
+    font-size: 2.5rem; /* 쿠폰 화면 제목 크기 증가 */
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
 .coupon {
-    width: 300px;
-    padding: 20px;
-    border: 2px dashed #4CAF50;
-    border-radius: 15px;
+    width: 350px; /* 쿠폰 크기 증가 */
+    padding: 30px;
+    border: 3px dashed #4CAF50;
+    border-radius: 20px;
     margin: 30px 0;
     background-color: #f9f9f9;
 }
 
 .coupon h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem; /* 쿠폰 텍스트 크기 증가 */
+    margin-bottom: 15px;
 }
 
 .coupon-date {
-    font-size: 1rem;
+    font-size: 1.4rem; /* 쿠폰 날짜 크기 증가 */
     color: #666;
 }
 
@@ -174,22 +182,31 @@ body {
     }
 
     #startScene h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+    }
+
+    .instructions p {
+        font-size: 1.3rem;
     }
 
     .problem {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     .btn {
-        padding: 12px 24px;
-        font-size: 1rem;
+        padding: 15px 30px;
+        font-size: 1.5rem;
     }
 
     #answerInput {
-        width: 180px;
-        height: 50px;
-        font-size: 1.8rem;
+        width: 220px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+
+    .coupon {
+        width: 300px;
+        padding: 25px;
     }
 }
 
