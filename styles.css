@@ -1,0 +1,208 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.scene {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #45a049;
+}
+
+/* Start Scene */
+#startScene h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.instructions p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Game Scene */
+.score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.timer-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.timer-progress {
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 5s linear;
+}
+
+.problem {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.answer-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#answerInput {
+    width: 200px;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Success Scene */
+#successScene h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Fail Scene */
+#failScene h2 {
+    font-size: 2rem;
+    color: #f44336;
+    margin-bottom: 20px;
+}
+
+.fail-animation {
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.flying-emoji {
+    font-size: 50px;
+    position: absolute;
+    animation: flyAcross 4s linear;
+}
+
+@keyframes flyAcross {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Coupon Scene */
+.coupon {
+    width: 300px;
+    padding: 20px;
+    border: 2px dashed #4CAF50;
+    border-radius: 15px;
+    margin: 30px 0;
+    background-color: #f9f9f9;
+}
+
+.coupon h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.coupon-date {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .scene {
+        padding: 15px;
+    }
+
+    #startScene h1 {
+        font-size: 1.5rem;
+    }
+
+    .problem {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    #answerInput {
+        width: 180px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.scene:not(.hidden) {
+    animation: fadeIn 0.3s ease;
+} 

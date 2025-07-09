@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🧮 더하기 빨리 계산하기! 🧮</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Scene 1: Start Screen -->
+    <div class="scene" id="startScene">
+        <h1>🧮 더하기 빨리 계산하기! 🧮</h1>
+        <div class="instructions">
+            <p>👉 5초 안에 문제를 풀고 정답을 입력하세요!</p>
+            <p>3문제 연속 정답 시 음료수 쿠폰이 지급됩니다!</p>
+            <p>준비되면 시작 버튼을 눌러주세요!</p>
+        </div>
+        <button class="btn start-btn">시작하기 ▶️</button>
+    </div>
+
+    <!-- Scene 2: Game Screen -->
+    <div class="scene hidden" id="gameScene">
+        <div class="score">연속 정답: <span id="score">0</span>/3</div>
+        <div class="timer-bar">
+            <div class="timer-progress"></div>
+        </div>
+        <div class="problem">
+            <span id="num1">23</span> + <span id="num2">17</span> = ?
+        </div>
+        <div class="answer-input">
+            <input type="number" id="answerInput" pattern="[0-9]*" inputmode="numeric">
+            <button class="btn check-btn">확인</button>
+        </div>
+    </div>
+
+    <!-- Scene 3: Success Screen -->
+    <div class="scene hidden" id="successScene">
+        <h2>🎯 정답입니다!</h2>
+        <div class="next-problem">1초 후 다음 문제로 이동합니다...</div>
+    </div>
+
+    <!-- Scene 4: Fail Screen -->
+    <div class="scene hidden" id="failScene">
+        <h2>❌ 틀렸습니다!</h2>
+        <div class="fail-animation">
+            <span class="flying-emoji">😭</span>
+        </div>
+        <div class="buttons">
+            <button class="btn retry-btn">다시 하기 🔁</button>
+            <button class="btn home-btn">홈으로 🏠</button>
+        </div>
+    </div>
+
+    <!-- Scene 5: Coupon Screen -->
+    <div class="scene hidden" id="couponScene">
+        <h2>🎉 축하합니다! 3문제를 연속 정답하셨어요!</h2>
+        <div class="coupon" id="couponCanvas">
+            <h3>🥤 음료수 1잔 무료 쿠폰</h3>
+            <p class="coupon-date"></p>
+        </div>
+        <div class="buttons">
+            <button class="btn save-btn">쿠폰 저장하기 💾</button>
+            <button class="btn home-btn">홈으로 🏠</button>
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="successSound" src="assets/Ascending 3.mp3"></audio>
+    <audio id="failSound" src="assets/fail_01.mp3"></audio>
+    <audio id="finalSuccessSound" src="assets/suc_01.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html> 
